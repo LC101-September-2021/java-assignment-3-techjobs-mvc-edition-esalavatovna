@@ -44,7 +44,7 @@ public class ListController {
         model.addAttribute("locations", JobData.getAllLocations());
         model.addAttribute("positions", JobData.getAllPositionTypes());
         model.addAttribute("skills", JobData.getAllCoreCompetency());
-
+//        name,employer,location,position type,core competency
         return "list";
     }
 
@@ -55,7 +55,7 @@ public class ListController {
             jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
         } else {
-            jobs = JobData.findByColumnAndValue(column, value);
+            jobs = JobData.findByColumnAndValue( column, value);
             model.addAttribute("title", "Jobs with " + columnChoices.get(column) + ": " + value);
         }
         model.addAttribute("jobs", jobs);

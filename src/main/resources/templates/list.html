@@ -19,14 +19,15 @@
                     <th th:text = "${column.value}"></th>
                 </th:block>
             </tr>
-            <tr>
+
                 <!-- TODO #2: Complete the View Jobs By Category Table. -->
 
                  <!-- Feel free to remove or modify this element if necessary. -->
+            <tr>
                 <td>
                     <ul>
                         <li>
-                    <a th:href="@{/list/jobs}">View All</a>
+                    <a th:href="@{/list/jobs?column=all}">View All</a>
                         </li>
                     </ul>
                 </td>
